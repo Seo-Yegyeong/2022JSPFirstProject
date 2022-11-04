@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+<h2 id="title">HTML Forms</h2>
+
+<form action="form_ok.jsp" method="post">
+
+  <fieldset style="width:40%;margin:30px">
+    <legend>개인 정보 기입</legend>
+    <b>이름</b> : <input type="text" name="name"/><br><br>
+    <b>출생</b> : <input type="date" id="birthdate" name="birthdate"><br><br>
+    <b>성별</b> : <input type="radio" id="남" name="gender" value="남">
+    <label for="남">남</label>
+    <input type="radio" id="여" name="gender" value="여">
+    <label for="여">여</label><br><br>
+    <b>지역</b> : <select id="region" name="region">
+    <option value="서울">서울</option>
+    <option value="경기도">경기도</option>
+    <option value="인천">인천</option>
+    <option value="충청도">충청도</option>
+    <option value="전라도">전라도</option>
+    <option value="강원도">강원도</option>
+    <option value="경상도">경상도</option>
+    <option value="제주도">제주도</option>
+  </select><br><br>
+    <b>학교</b> : <input type="text" name="university"/><br><br>
+    <b>세대명</b> : <input type="text" name="generation"/><br><br>
+    <b>RC</b> : <select id="rc" name="rc">
+    <option value="벧엘관">벧엘관</option>
+    <option value="비전관">비전관</option>
+    <option value="창조관">창조관</option>
+    <option value="국제관">국제관</option>
+    <option value="은혜관">은혜관</option>
+    <option value="로뎀관">로뎀관</option>
+    <option value="하용조관">하용조관</option>
+    <option value="갈대상자관">갈대상자관</option>
+  </select><br><br>
+    <b>수강 중인 교과목</b> : <br><br>
+    <input type="checkbox" id="subject1" name="subject[]" value="실전프로젝트1">
+    <label for="subject1">실전프로젝트1</label><br>
+    <input type="checkbox" id="subject2" name="subject[]" value="컴퓨터 네트워크">
+    <label for="subject2">컴퓨터 네트워크</label><br>
+    <input type="checkbox" id="subject3" name="subject[]" value="머신러닝">
+    <label for="subject3">머신러닝</label><br>
+    <input type="checkbox" id="subject4" name="subject[]" value="웹 서비스 개발">
+    <label for="subject4">웹 서비스 개발</label><br>
+    <input type="checkbox" id="subject5" name="subject[]" value="공학프로젝트기획">
+    <label for="subject5">공학프로젝트기획</label><br>
+    <input type="checkbox" id="subject6" name="subject[]" value="컴퓨터 구조">
+    <label for="subject6">컴퓨터 구조</label><br><br>
+    <b>좌우명</b> : <textarea name="motto" rows="10" cols="30"></textarea><br><br>
+    <label for="Honor_Yes1">나는 아너코드를 지킬 것을 하나님과 사람 앞에 약속합니다.</label><br><br>
+    <input type="radio" id="Honor_Yes1" name="honor_code" value="나는 아너코드를 지킬 것을 하나님과 사람 앞에 약속합니다.">
+    <label for="Honor_Yes1">네, 약속합니다.</label>
+    <input type="radio" id="Honor_Yes2" name="honor_code" value="나는 정직과 성실을 지킬 것을 약속합니다.">
+    <label for="Honor_Yes2">당연한 말씀을~</label>
+  </fieldset>
+
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>이름(Text), 출생일(date), 성별(radio), 지역(select), 수강 중인 교과목(checkbox), ,좌우명(textarea)</p>
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/form_ok.php".</p>
+
+</body>
+</html>
